@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Content = () => {
+const Content = () => {
     return (
         // <React.Fragment>
         <>
@@ -20,4 +20,6 @@ export const Content = () => {
         // </React.Fragment>
     )
 }
+
+export const test = 10
 export default Content
