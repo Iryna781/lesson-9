@@ -1,5 +1,5 @@
 import React from 'react'
-import './Content.css'
+import './Content.scss'
 type Props = {
     p1: string
     p2: string
