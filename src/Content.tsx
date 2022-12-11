@@ -1,25 +1,16 @@
 import React from 'react'
 
-const Content = () => {
-    return (
-        // <React.Fragment>
-        <>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                quaerat distinctio repellendus minus quibusdam et laudantium
-                inventore magnam eum exercitationem quidem consectetur nihil
-                dolores perferendis nam, unde porro numquam saepe.
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima
-                quasi illum ut voluptatibus, maiores nam harum vero enim dolorem
-                corrupti iusto odit accusamus, omnis fugit necessitatibus dolore
-                quam quidem dolorum.
-            </p>
-        </>
-        // </React.Fragment>
-    )
+type Props = {
+    p1: string
+    p2: string
 }
 
-export const test = 10
+const Content = ({ p1, p2 }: Props) => {
+    return (
+        <>
+            <p>{p1}</p>
+            <p>{p2}</p>
+        </>
+    )
+}
 export default Content
