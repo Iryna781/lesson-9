@@ -15,8 +15,16 @@ import ReactDOM from 'react-dom/client'
 //         </div>
 //     )
 // }
-const Title = () => {
-    return <h1>Hello React.js</h1>
+// const Title = () => {
+//     return <h1>Hello React.js</h1>
+// }
+
+type TitleProps = {
+    title: string | number
+}
+
+const Title = (props: TitleProps) => {
+    return <h1>Hello {props.title}</h1>
 }
 
 const Content = () => {
@@ -43,7 +51,9 @@ const App = () => {
     return (
         // <React.Fragment>
         <>
-            <Title />
+            <Title title={10} />
+            <Title title="About" />
+            <Title title="Bla-bla" />
 
             <Content />
         </>
