@@ -32,7 +32,19 @@ const ProductsListItem = ({
     const onDecrement = () => {
         setCount((prevState: number) => prevState - 1)
     }
-
+    const [color, setColor] = useState<string>('green')
+    // const changeColor = () => {
+    //     setColor((prevState:string) => prevState === 'green' ? 'red')
+    // }
+    const changeColor = () => {
+        setColor((prevState: string) => {
+            if (prevState === 'green') {
+                return 'red'
+            } else {
+                return 'green'
+            }
+        })
+    }
     return (
         <Card className="product-list-item">
             <CardContent>
@@ -48,6 +60,9 @@ const ProductsListItem = ({
                     <span>Capacity:</span> {capacity} gb
                 </div>
                 <div className="product-price">{price} $ </div>
+                <p>Color:{color} </p>
+                <button onClick={() => changeColor()}>Change color</button>
+
                 <div className="product-quantity">
                     <Button variant="outlined" onClick={() => onDecrement()}>
                         -
