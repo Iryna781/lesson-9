@@ -33,18 +33,20 @@ const ProductsListItem = ({
         setCount((prevState: number) => prevState - 1)
     }
     const [color, setColor] = useState<string>('green')
-    // const changeColor = () => {
-    //     setColor((prevState:string) => prevState === 'green' ? 'red')
-    // }
     const changeColor = () => {
-        setColor((prevState: string) => {
-            if (prevState === 'green') {
-                return 'red'
-            } else {
-                return 'green'
-            }
-        })
+        setColor((prevState: string) =>
+            prevState === 'green' ? 'red' : 'green'
+        )
     }
+    // const changeColor = () => {
+    //     setColor((prevState: string) => {
+    //         if (prevState === 'green') {
+    //             return 'red'
+    //         } else {
+    //             return 'green'
+    //         }
+    //     })
+    // }
     return (
         <Card className="product-list-item">
             <CardContent>
