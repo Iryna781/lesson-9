@@ -1,5 +1,5 @@
-type ProductsProps = {
-   id: number
+export type ProductsProps = {
+    id: number
     title:string
     desc: string
     type:string
@@ -10,7 +10,7 @@ type ProductsProps = {
 
 const productsArray: ProductsProps[] = [
     {
-      id: 1,
+        id: 1,
         title:"iPhone X",
         desc: "This is iPhone X",
         type:"phone",
@@ -19,7 +19,7 @@ const productsArray: ProductsProps[] = [
         image: "/images/iphone-black.jpg"
      },
      {
-      id: 2,
+        id: 2,
         title:"iPhone SX",
         desc: "This is iPhone XS",
         type:"phone",
@@ -28,7 +28,7 @@ const productsArray: ProductsProps[] = [
         image: "/images/iphone-gold.jpg"
      },
      {
-      id: 3,
+        id: 3,
         title:"iPhone 13 Pro",
         desc: "This is iPhone 13 Pro",
         type:"phone",
@@ -37,7 +37,7 @@ const productsArray: ProductsProps[] = [
         image: "/images/iphone-green.jpg"
      },
      {
-      id: 4,
+        id: 4,
         title:"iPhone 14 Pro",
         desc: "This is iPhone 14 Pro",
         type:"phone",
@@ -46,7 +46,7 @@ const productsArray: ProductsProps[] = [
         image: "/images/iphone-purple.jpg"
      },
      {
-      id: 5,
+        id: 5,
         title:"iPhone 13",
         desc: "This is iPhone 13",
         type:"phone",
@@ -55,7 +55,7 @@ const productsArray: ProductsProps[] = [
         image: "/images/iphone-red.jpg"
      },
      {
-      id: 6,
+        id: 6,
         title:"iPhone 12",
         desc: "This is iPhone 12",
         type:"phone",
@@ -66,6 +66,14 @@ const productsArray: ProductsProps[] = [
 
     
 ]
+export const getProductsObject = (array:ProductsProps[]) => array.reduce(
+  (object, product) => ({
+      ...object,
+      [product.id]: product,
+  }),
+  {}
+)
+
 
 export default productsArray
 

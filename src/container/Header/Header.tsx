@@ -29,7 +29,6 @@ const Header = ({ productsInCart }: Props) => {
                     <div className="logo">
                         <img src={logo} alt="Logo" />
                     </div>
-
                     <Menu />
                     <CartHeader productsInCart={productsInCart} />
                 </Toolbar>
